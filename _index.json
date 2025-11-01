@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "id": "APE2511-GE",
+      "name": "Aperitivo Cluster Mesh - Genova",
+      "date": "2025-11-25",
+      "description": "Aperitivo networking con il team di Genova per celebrare i successi del trimestre",
+      "type": "Networking",
+      "folder": "APE2511-GE"
+    },
+    {
+      "id": "APE2511-MI",
+      "name": "Aperitivo Cluster Mesh - Milano",
+      "date": "2025-11-25",
+      "description": "Aperitivo networking con il team di Milano per celebrare i successi del trimestre",
+      "type": "Networking",
+      "folder": "APE2511-MI"
+    },
+    {
+      "id": "APE2511-TO",
+      "name": "Aperitivo Cluster Mesh - Torino",
+      "date": "2025-11-25",
+      "description": "Aperitivo networking con il team di Torino per celebrare i successi del trimestre",
+      "type": "Networking",
+      "folder": "APE2511-TO"
+    }
+  ]
+}

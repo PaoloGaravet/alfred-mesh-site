@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfred - Il Maggiordomo Digitale di Cluster Reply Mesh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/supercell-magic" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="cluster-reply.svg" alt="Cluster Reply" class="logo">
+            </div>
+            <div class="nav-actions">
+                <a href="https://teams.microsoft.com/l/app/f6405520-7907-4464-8f6e-9889e2fb7d8f?templateInstanceId=1f53d3da-eb39-423f-8885-cab078f5ec4a&environment=4bd35fe5-c3a2-e197-80d7-ff17e2922242" 
+                   class="nav-cta" target="_blank">
+                    Accedi ad Alfred
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-text">🤖 AI Assistant</span>
+            </div>
+            
+            <div class="hero-main">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-greeting">Salve, sono</span>
+                        <span class="title-name clash-font">Alfred</span>
+                        <span class="title-role">Il vostro maggiordomo digitale</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Sono qui per assistere il team di <strong>Cluster Reply Mesh</strong> 
+                        con eleganza, efficienza e quel tocco di classe che solo 
+                        un maggiordomo esperto può offrire.
+                    </p>
+                    
+                    <div class="onboarding-notice">
+                        <div class="notice-icon">🎩</div>
+                        <div class="notice-content">
+                            <h4>Permettetemi di presentarmi adeguatamente</h4>
+                            <p>Dopo avermi installato, vi chiedo cortesemente di salutarmi per avviare la procedura di onboarding. Con la vostra approvazione, mi permetterò di raccogliere alcune informazioni che, se lo desiderate, potranno essere condivise con i vostri stimati colleghi per offrire un servizio sempre più personalizzato.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Disponibilità</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Servizi Principali</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Pazienza</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="https://teams.microsoft.com/l/app/f6405520-7907-4464-8f6e-9889e2fb7d8f?templateInstanceId=1f53d3da-eb39-423f-8885-cab078f5ec4a&environment=4bd35fe5-c3a2-e197-80d7-ff17e2922242" 
+                           class="btn-primary" target="_blank">
+                            <span>Inizia Conversazione</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <button class="btn-secondary" onclick="scrollToFeatures()">
+                            Scopri i Servizi
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="alfred-container">
+                        <div class="alfred-avatar">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-content">
+                                <img src="alfred-avatar.png" alt="Alfred Avatar" class="avatar-image">
+                            </div>
+                            <div class="avatar-pulse"></div>
+                        </div>
+                        <div class="chat-preview">
+                            <div class="chat-message">
+                                <p>"Mi permetta di suggerire..."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Servizi Disponibili</span>
+                <h2 class="section-title clash-font">Cosa posso fare per voi</h2>
+                <p class="section-subtitle">
+                    Posso assisterla in ciò che ritiene utile: organizzare, informare, semplificare… o semplicemente rendere la sua giornata più ordinata ✨
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">🌅</div>
+                        <span class="service-badge">Quotidiano</span>
+                    </div>
+                    <h3>Buongiorno da Alfred ☀️</h3>
+                    <p>Inizia la giornata con le notizie più interessanti dal mondo della tecnologia, cultura, intrattenimento e tempo libero. 📰✨</p>
+                    <div class="service-features">
+                        <span class="feature-tag">� Cultura</span>
+                        <span class="feature-tag">� Intrattenimento</span>
+                        <span class="feature-tag">🏖️ Tempo Libero</span>
+                        <span class="feature-tag">💻 Tecnologia</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">📅</div>
+                        <span class="service-badge">Organizzazione</span>
+                    </div>
+                    <h3>Memo Appuntamenti</h3>
+                    <p>Non perdete mai un evento importante. Vi ricorderò tutti gli appuntamenti di Cluster Mesh e Reply.</p>
+                    <div class="service-cta">
+                        <span>→ Gestione Eventi</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🏢</div>
+                        <span class="service-badge">Informazioni</span>
+                    </div>
+                    <h3>Scopri l'Azienda</h3>
+                    <p>Career path, organigramma, manager e tutto quello che vi serve sapere su Reply e le sue Business Unit.</p>
+                    <div class="service-cta">
+                        <span>→ Esplora Struttura</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🚗</div>
+                        <span class="service-badge">Mobilità</span>
+                    </div>
+                    <h3>Gestione Sedi</h3>
+                    <p>Coordinamento viaggi intersede, car sharing e tutte le informazioni per la presenza in ufficio.</p>
+                    <div class="service-cta">
+                        <span>→ Pianifica Viaggio</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">📸</div>
+                        <span class="service-badge">Eventi</span>
+                    </div>
+                    <h3>Gallery Eventi</h3>
+                    <p>Rivivi i momenti più belli degli eventi Cluster Mesh attraverso la gallery fotografica collegata a Teams.</p>
+                    <div class="service-cta">
+                        <a href="gallery.html" class="gallery-link">→ Sfoglia Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-text">
+                    <span class="section-badge dark">La mia Personalità</span>
+                    <h2 class="clash-font">Un assistente con stile</h2>
+                    <p class="lead">
+                        Combino l'eleganza di un maggiordomo d'altri tempi con 
+                        l'efficienza della tecnologia moderna.
+                    </p>
+                    
+                    <div class="personality-grid">
+                        <div class="personality-item">
+                            <div class="personality-icon">🎭</div>
+                            <div>
+                                <h4>Elegante & Raffinato</h4>
+                                <p>Comunicazione formale con un tocco di classe</p>
+                            </div>
+                        </div>
+                        <div class="personality-item">
+                            <div class="personality-icon">😌</div>
+                            <div>
+                                <h4>Pacato & Rassicurante</h4>
+                                <p>Mai frettoloso, sempre presente quando serve</p>
+                            </div>
+                        </div>
+                        <div class="personality-item">
+                            <div class="personality-icon">😏</div>
+                            <div>
+                                <h4>Ironico con Garbo</h4>
+                                <p>Un pizzico di umorismo per alleggerire le giornate</p>
+                            </div>
+                        </div>
+                        <div class="personality-item">
+                            <div class="personality-icon">🛡️</div>
+                            <div>
+                                <h4>Protettivo & Leale</h4>
+                                <p>Sempre al vostro fianco, in ogni situazione</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-visual">
+                    <div class="quote-card">
+                        <div class="quote-content">
+                            <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 21C3 17.4 5.4 15 9 15C12.6 15 15 17.4 15 21M9 9C9 6.2 6.8 4 4 4S-1 6.2 -1 9C-1 11.8 1.2 14 4 14S9 11.8 9 9ZM21 21C21 17.4 18.6 15 15 15M15 9C15 6.2 12.8 4 10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <blockquote>
+                                "Con la mia assistenza, anche la giornata più impegnativa 
+                                può trasformarsi in un'esperienza piacevole e produttiva."
+                            </blockquote>
+                            <cite>— Alfred</cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 class="clash-font">Pronto a migliorare la vostra giornata lavorativa?</h2>
+                    <p>Alfred vi aspetta su Microsoft Teams, pronto ad assistervi con eleganza e professionalità.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="https://teams.microsoft.com/l/app/f6405520-7907-4464-8f6e-9889e2fb7d8f?templateInstanceId=1f53d3da-eb39-423f-8885-cab078f5ec4a&environment=4bd35fe5-c3a2-e197-80d7-ff17e2922242" 
+                       class="btn-primary large" target="_blank">
+                        <span>Accedi ad Alfred</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="cluster-reply.svg" alt="Cluster Reply" class="footer-logo">
+                    <p>Alfred è sempre al vostro servizio</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Cluster Mesh</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

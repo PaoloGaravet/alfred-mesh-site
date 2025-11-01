@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Eventi - Alfred</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/supercell-magic" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="cluster-reply.svg" alt="Cluster Reply" class="logo">
+                <a href="index.html" class="home-icon-link" title="Home">
+                    🏠
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://teams.microsoft.com/l/app/f6405520-7907-4464-8f6e-9889e2fb7d8f?templateInstanceId=1f53d3da-eb39-423f-8885-cab078f5ec4a&environment=4bd35fe5-c3a2-e197-80d7-ff17e2922242" 
+                   class="nav-cta" target="_blank">
+                    Accedi ad Alfred
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-badge">
+                    <span class="badge-text">📸 Gallery Eventi</span>
+                </div>
+                <h1 class="clash-font">I momenti più belli di Cluster Mesh</h1>
+                <p class="header-description">
+                    Rivivi i nostri eventi attraverso le immagini. Seleziona un evento per esplorare la gallery fotografica.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Selector -->
+    <section class="event-selector">
+        <div class="container">
+            <div class="selector-header">
+                <h2>Seleziona un Evento</h2>
+                <div class="search-box">
+                    <input type="text" id="eventSearch" placeholder="🔍 Cerca evento..." />
+                </div>
+            </div>
+            
+            <div class="events-loading" id="eventsLoading">
+                <div class="loading-spinner"></div>
+                <p>Caricamento eventi...</p>
+            </div>
+            
+            <div class="events-grid" id="eventsGrid" style="display: none;">
+                <!-- Eventi verranno caricati dinamicamente -->
+            </div>
+            
+            <div class="events-error" id="eventsError" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h3>Errore nel caricamento</h3>
+                <p>Non è stato possibile caricare la lista degli eventi. Riprova più tardi.</p>
+                <button onclick="loadEvents()" class="retry-btn">Riprova</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Viewer -->
+    <section class="gallery-viewer" id="galleryViewer" style="display: none;">
+        <div class="container">
+            <div class="gallery-header-info">
+                <button class="back-to-events" onclick="showEventSelector()">
+                    ← Torna agli Eventi
+                </button>
+                <div class="event-info">
+                    <h2 id="selectedEventName">Nome Evento</h2>
+                    <p id="selectedEventDate">Data evento</p>
+                </div>
+            </div>
+            
+            <div class="gallery-loading" id="galleryLoading">
+                <div class="loading-spinner"></div>
+                <p>Caricamento immagini...</p>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Immagini verranno caricate dinamicamente -->
+            </div>
+            
+            <div class="gallery-error" id="galleryError" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h3>Errore nel caricamento</h3>
+                <p>Non è stato possibile caricare le immagini per questo evento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" style="display: none;">
+        <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <button class="lightbox-prev" onclick="previousImage()">‹</button>
+            <img id="lightboxImage" src="" alt="">
+            <button class="lightbox-next" onclick="nextImage()">›</button>
+            <div class="lightbox-info">
+                <p id="lightboxCaption"></p>
+                <span id="lightboxCounter"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="auth.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

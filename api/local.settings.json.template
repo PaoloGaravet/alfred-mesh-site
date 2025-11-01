@@ -1,0 +1,13 @@
+# Azure Function App Settings
+# Questi valori devono essere configurati nel portale Azure o tramite Azure CLI
+
+# Azure AD / Dataverse Authentication
+AZURE_TENANT_ID=b00367e2-193a-4f48-94de-7245d45c0947
+DATAVERSE_CLIENT_ID=your_client_id_here
+DATAVERSE_CLIENT_SECRET=your_client_secret_here
+
+# Dataverse Environment
+DATAVERSE_ENVIRONMENT_URL=https://org4bd35fe5.crm4.dynamics.com
+
+# Application Insights (opzionale)
+APPINSIGHTS_INSTRUMENTATIONKEY=your_insights_key_here
