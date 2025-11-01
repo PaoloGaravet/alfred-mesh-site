@@ -1,0 +1,165 @@
+{
+  "description": "Prompt per la funzionalità Gallery Eventi - Upload e Visualizzazione",
+  "categories": [
+    {
+      "category": "Upload Foto",
+      "prompts": [
+        "Carica queste foto nella gallery",
+        "Pubblica queste immagini nella gallery eventi",
+        "Voglio caricare foto dell'evento",
+        "Aggiungi queste foto alla gallery",
+        "Condividi queste immagini con il team",
+        "Upload foto evento",
+        "Carica nella gallery dell'evento APE2511-MI",
+        "Pubblica queste foto per l'evento di Milano"
+      ]
+    },
+    {
+      "category": "Visualizzazione Gallery",
+      "prompts": [
+        "Mostrami la gallery eventi",
+        "Voglio vedere le foto degli eventi",
+        "Apri la gallery fotografica",
+        "Fammi vedere le foto del team building",
+        "Quali eventi hanno foto in gallery?",
+        "Mostra gallery eventi Cluster Mesh",
+        "Link alla gallery"
+      ]
+    },
+    {
+      "category": "Ricerca Eventi",
+      "prompts": [
+        "Quali eventi sono disponibili in gallery?",
+        "Mostrami le foto dell'evento di Milano",
+        "C'è una gallery per l'evento APE2511-TO?",
+        "Fammi vedere le foto del team building di novembre",
+        "Mostra eventi con foto",
+        "Quali sono gli ultimi eventi fotografati?"
+      ]
+    },
+    {
+      "category": "Condivisione",
+      "prompts": [
+        "Condividi il link alla gallery",
+        "Come posso condividere la gallery?",
+        "Invia il link della gallery eventi",
+        "Voglio condividere le foto con i colleghi",
+        "Link diretto alla gallery dell'evento APE2511-MI"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "title": "Come caricare foto direttamente da Teams",
+      "steps": [
+        "Apri la chat con Alfred in Microsoft Teams",
+        "Allega una o più foto (fino a 10) usando il pulsante 📎",
+        "Puoi aggiungere un messaggio opzionale (es: 'Carica nella gallery')",
+        "Alfred ti chiederà per quale evento vuoi pubblicare le foto",
+        "Seleziona l'evento dall'elenco proposto",
+        "Conferma e le foto saranno caricate nella gallery!"
+      ]
+    },
+    {
+      "title": "Visualizzare la Gallery",
+      "steps": [
+        "Accedi al sito Alfred: proud-pebble-091f8b903.3.azurestaticapps.net",
+        "Clicca sull'icona Gallery nella navbar",
+        "Oppure clicca su 'Sfoglia Gallery' nella home page",
+        "Seleziona l'evento desiderato",
+        "Naviga tra le foto con i tasti freccia o swipe su mobile"
+      ]
+    },
+    {
+      "title": "Accesso Diretto a un Evento",
+      "steps": [
+        "Usa il deep linking per aprire direttamente un evento",
+        "Formato URL: gallery.html?event=CODICE_EVENTO",
+        "Esempio: gallery.html?event=APE2511-MI",
+        "Ideale per condividere con colleghi"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quante foto posso caricare alla volta?",
+      "answer": "Puoi caricare fino a 10 foto contemporaneamente. Se hai più foto, puoi fare upload multipli successivi."
+    },
+    {
+      "question": "Quali formati immagine sono supportati?",
+      "answer": "Sono supportati i formati più comuni: JPG, JPEG, PNG e GIF. Le foto vengono caricate con la loro qualità originale."
+    },
+    {
+      "question": "Posso caricare foto senza scrivere nulla?",
+      "answer": "Sì! Basta allegare le foto nella chat con Alfred. Il bot ti chiederà automaticamente per quale evento vuoi pubblicarle."
+    },
+    {
+      "question": "Come organizzo le foto per evento?",
+      "answer": "Durante l'upload, Alfred ti chiede di selezionare l'evento. Le foto vengono automaticamente organizzate nella cartella dell'evento corrispondente."
+    },
+    {
+      "question": "Posso vedere chi ha caricato le foto?",
+      "answer": "Attualmente le foto sono anonime nella gallery. Questa funzionalità potrebbe essere aggiunta in futuro."
+    },
+    {
+      "question": "Le foto sono visibili a tutti?",
+      "answer": "Sì, la gallery è accessibile a tutti gli utenti autenticati di Cluster Mesh attraverso il sito Alfred."
+    },
+    {
+      "question": "Posso eliminare foto già caricate?",
+      "answer": "Al momento non è possibile eliminare foto dalla gallery. Contatta l'amministratore se necessario."
+    },
+    {
+      "question": "Come condivido un evento specifico?",
+      "answer": "Usa il deep linking: copia l'URL della gallery e aggiungi ?event=CODICE_EVENTO (es: gallery.html?event=APE2511-MI)"
+    }
+  ],
+  "eventi_esempio": [
+    {
+      "codice": "APE2511-MI",
+      "nome": "Aperitivo Milano - Novembre 2025",
+      "foto": 30,
+      "link": "gallery.html?event=APE2511-MI"
+    },
+    {
+      "codice": "APE2511-TO",
+      "nome": "Aperitivo Torino - Novembre 2025",
+      "foto": 78,
+      "link": "gallery.html?event=APE2511-TO"
+    },
+    {
+      "codice": "APE2511-GE",
+      "nome": "Aperitivo Genova - Novembre 2025",
+      "foto": 25,
+      "link": "gallery.html?event=APE2511-GE"
+    },
+    {
+      "codice": "MAIN2506-FORTE",
+      "nome": "Main Event - Forte dei Marmi - Giugno 2025",
+      "foto": 0,
+      "link": "gallery.html?event=MAIN2506-FORTE"
+    }
+  ],
+  "tips": [
+    {
+      "icon": "💡",
+      "title": "Tip: Nome File",
+      "description": "Non preoccuparti del nome del file! Alfred aggiunge automaticamente l'estensione corretta se mancante."
+    },
+    {
+      "icon": "⚡",
+      "title": "Tip: Upload Veloce",
+      "description": "Allega tutte le foto insieme per un upload più veloce, invece di fare upload multipli singoli."
+    },
+    {
+      "icon": "📱",
+      "title": "Tip: Da Mobile",
+      "description": "Puoi caricare foto direttamente dal tuo smartphone usando l'app Teams - perfetto per foto scattate durante l'evento!"
+    },
+    {
+      "icon": "🔗",
+      "title": "Tip: Condivisione",
+      "description": "Usa il deep linking per creare link diretti agli eventi - perfetto per email o chat di team."
+    }
+  ]
+}

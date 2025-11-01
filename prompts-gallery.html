@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Gallery Eventi - Alfred</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/supercell-magic" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .prompts-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 24px 60px;
+        }
+        
+        .prompts-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .prompts-header h1 {
+            font-family: 'Supercell-Magic', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .prompts-header p {
+            font-size: 18px;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .category-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+            transition: var(--transition);
+        }
+        
+        .category-section:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .category-icon {
+            font-size: 32px;
+        }
+        
+        .category-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .prompts-list {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .prompt-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 16px 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .prompt-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(4px);
+        }
+        
+        .prompt-item::before {
+            content: "💬";
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .copy-btn {
+            margin-left: auto;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+        }
+        
+        .prompt-item:hover .copy-btn {
+            opacity: 1;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-section {
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 12px;
+        }
+        
+        .faq-answer {
+            font-size: 16px;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        
+        .sedi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+        
+        .sede-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        
+        .sede-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .sede-address {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 16px;
+        }
+        
+        .sede-features {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .sede-feature {
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .sede-feature.active {
+            background: rgba(139, 92, 246, 0.2);
+            color: #a78bfa;
+        }
+        
+        @media (max-width: 768px) {
+            .prompts-header h1 {
+                font-size: 36px;
+            }
+            
+            .category-section {
+                padding: 24px;
+            }
+            
+            .prompt-item {
+                font-size: 13px;
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="cluster-reply.svg" alt="Cluster Reply" class="logo">
+                <a href="index.html" class="nav-icon-btn" title="Home">
+                    <img src="home.png" alt="Home" class="nav-icon">
+                </a>
+                <a href="gallery.html" class="nav-icon-btn" title="Gallery">
+                    <img src="gallery.png" alt="Gallery" class="nav-icon">
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://teams.microsoft.com/l/app/f6405520-7907-4464-8f6e-9889e2fb7d8f?templateInstanceId=1f53d3da-eb39-423f-8885-cab078f5ec4a&environment=4bd35fe5-c3a2-e197-80d7-ff17e2922242" 
+                   class="nav-cta" target="_blank">
+                    Accedi ad Alfred
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="prompts-container">
+        <div class="prompts-header">
+            <h1>� Gallery Eventi</h1>
+            <p>Scopri come caricare e visualizzare le foto degli eventi direttamente da Microsoft Teams</p>
+        </div>
+
+        <div id="categories"></div>
+
+        <div class="faq-section" style="border-top: none; padding-top: 0; margin-top: 60px;">
+            <div class="prompts-header" style="margin-bottom: 32px;">
+                <h2 style="font-size: 32px; font-family: 'Supercell-Magic', sans-serif; color: white;">📋 Istruzioni</h2>
+            </div>
+            <div id="instructions"></div>
+        </div>
+
+        <div class="faq-section">
+            <div class="prompts-header" style="margin-bottom: 32px;">
+                <h2 style="font-size: 32px; font-family: 'Supercell-Magic', sans-serif; color: white;">❓ FAQ</h2>
+            </div>
+            <div id="faq"></div>
+        </div>
+
+        <div class="faq-section">
+            <div class="prompts-header" style="margin-bottom: 32px;">
+                <h2 style="font-size: 32px; font-family: 'Supercell-Magic', sans-serif; color: white;">🎉 Eventi Disponibili</h2>
+            </div>
+            <div id="sedi" class="sedi-grid"></div>
+        </div>
+
+        <div class="faq-section">
+            <div class="prompts-header" style="margin-bottom: 32px;">
+                <h2 style="font-size: 32px; font-family: 'Supercell-Magic', sans-serif; color: white;">💡 Tips & Tricks</h2>
+            </div>
+            <div id="tips" class="sedi-grid"></div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const categoryIcons = {
+            "Upload Foto": "�",
+            "Visualizzazione Gallery": "�️",
+            "Ricerca Eventi": "🔍",
+            "Condivisione": "🔗"
+        };
+
+        async function loadPrompts() {
+            try {
+                const response = await fetch('https://alfredevents.blob.core.windows.net/prompts/prompts-gallery.json');
+                const data = await response.json();
+
+                // Render categories
+                const categoriesContainer = document.getElementById('categories');
+                data.categories.forEach(cat => {
+                    const section = document.createElement('div');
+                    section.className = 'category-section';
+                    
+                    const icon = categoryIcons[cat.category] || "📝";
+                    
+                    section.innerHTML = `
+                        <div class="category-header">
+                            <span class="category-icon">${icon}</span>
+                            <h2 class="category-title">${cat.category}</h2>
+                        </div>
+                        <div class="prompts-list">
+                            ${cat.prompts.map(prompt => `
+                                <div class="prompt-item" onclick="copyPrompt(this, '${prompt.replace(/'/g, "\\'")}')">
+                                    <span>${prompt}</span>
+                                    <button class="copy-btn">Copia</button>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    categoriesContainer.appendChild(section);
+                });
+
+                // Render FAQ
+                const faqContainer = document.getElementById('faq');
+                data.faq.forEach(item => {
+                    const faqItem = document.createElement('div');
+                    faqItem.className = 'faq-item';
+                    faqItem.innerHTML = `
+                        <div class="faq-question">${item.question}</div>
+                        <div class="faq-answer">${item.answer}</div>
+                    `;
+                    faqContainer.appendChild(faqItem);
+                });
+
+                // Render Instructions
+                const instructionsContainer = document.getElementById('instructions');
+                data.instructions.forEach(inst => {
+                    const instItem = document.createElement('div');
+                    instItem.className = 'faq-item';
+                    instItem.innerHTML = `
+                        <div class="faq-question">${inst.title}</div>
+                        <ol style="color: #aaa; line-height: 1.8; margin: 12px 0 0 20px;">
+                            ${inst.steps.map(step => `<li style="margin-bottom: 8px;">${step}</li>`).join('')}
+                        </ol>
+                    `;
+                    instructionsContainer.appendChild(instItem);
+                });
+
+                // Render Eventi
+                const sediContainer = document.getElementById('sedi');
+                data.eventi_esempio.forEach(evento => {
+                    const eventoCard = document.createElement('div');
+                    eventoCard.className = 'sede-card';
+                    eventoCard.style.cursor = 'pointer';
+                    eventoCard.onclick = () => window.open(evento.link, '_blank');
+                    eventoCard.innerHTML = `
+                        <div class="sede-name">${evento.nome}</div>
+                        <div class="sede-address">Codice: ${evento.codice}</div>
+                        <div class="sede-features">
+                            <span class="sede-feature active">📸 ${evento.foto} foto</span>
+                            <span class="sede-feature" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa;">🔗 Apri</span>
+                        </div>
+                    `;
+                    sediContainer.appendChild(eventoCard);
+                });
+
+                // Render Tips
+                const tipsContainer = document.getElementById('tips');
+                data.tips.forEach(tip => {
+                    const tipCard = document.createElement('div');
+                    tipCard.className = 'sede-card';
+                    tipCard.innerHTML = `
+                        <div style="font-size: 32px; margin-bottom: 12px;">${tip.icon}</div>
+                        <div class="sede-name" style="font-size: 18px;">${tip.title}</div>
+                        <p style="color: #aaa; font-size: 14px; margin-top: 8px; line-height: 1.6;">${tip.description}</p>
+                    `;
+                    tipsContainer.appendChild(tipCard);
+                });
+
+            } catch (error) {
+                console.error('Error loading prompts:', error);
+            }
+        }
+
+        function copyPrompt(element, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = element.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copiato';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPrompts);
+    </script>
+</body>
+</html>
