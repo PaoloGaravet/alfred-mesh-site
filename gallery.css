@@ -51,28 +51,6 @@
     margin: 0;
 }
 
-/* Home Icon Link */
-.home-icon-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1.8rem;
-    margin-left: 1rem;
-    padding: 0.5rem;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-}
-
-.home-icon-link:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
 /* Nav Actions */
 .nav-actions {
     display: flex;
