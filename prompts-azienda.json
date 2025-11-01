@@ -1,0 +1,147 @@
+{
+  "description": "Prompt per la funzionalità Scopri l'Azienda",
+  "categories": [
+    {
+      "category": "Career Path",
+      "prompts": [
+        "Come funziona il career path in Reply?",
+        "Quali sono i livelli di seniority?",
+        "Come posso avanzare di livello?",
+        "Quali sono le opportunità di crescita?",
+        "Come funziona la promozione?",
+        "Quali competenze servono per il prossimo livello?",
+        "C'è un piano di sviluppo professionale?",
+        "Come funziona il sistema di valutazione?"
+      ]
+    },
+    {
+      "category": "Organigramma e Business Unit",
+      "prompts": [
+        "Quali sono le Business Unit di Reply?",
+        "Com'è strutturata Cluster Reply?",
+        "Chi sono i responsabili di Cluster Mesh?",
+        "Qual è l'organigramma di Reply?",
+        "Quante persone lavorano in Cluster Mesh?",
+        "Quali sono le BU del gruppo Reply?",
+        "Come sono organizzate le sedi?",
+        "Chi sono i Practice Leader?"
+      ]
+    },
+    {
+      "category": "Manager e Leadership",
+      "prompts": [
+        "Chi è il mio manager?",
+        "Chi è il responsabile della mia BU?",
+        "Come contattare il management?",
+        "Chi sono i Partner di Reply?",
+        "Chi è il CEO di Reply?",
+        "Quali sono i referenti HR?",
+        "Chi gestisce il mio team?"
+      ]
+    },
+    {
+      "category": "Offering e Competenze",
+      "prompts": [
+        "Quali servizi offre Cluster Mesh?",
+        "Quali tecnologie usa Cluster Reply?",
+        "Qual è l'offering della mia BU?",
+        "In quali settori opera Reply?",
+        "Quali certificazioni ha Reply?",
+        "Quali progetti sta facendo Cluster Mesh?",
+        "Quali competenze cerca Reply?",
+        "Come funziona la formazione tecnica?"
+      ]
+    },
+    {
+      "category": "Colleghi e Team",
+      "prompts": [
+        "Chi lavora nel mio team?",
+        "Quante persone ci sono in Reply?",
+        "Chi lavora su tecnologie cloud?",
+        "Quali colleghi hanno la mia seniority?",
+        "Chi si occupa di AI in Reply?",
+        "Fammi conoscere il team di Milano",
+        "Chi lavora nel mio progetto?"
+      ]
+    },
+    {
+      "category": "Benefit e Welfare",
+      "prompts": [
+        "Quali benefit offre Reply?",
+        "Come funziona il welfare aziendale?",
+        "C'è la mensa aziendale?",
+        "Quali sono le policy sul remote working?",
+        "Come funzionano i buoni pasto?",
+        "Ci sono convenzioni aziendali?",
+        "Come richiedere giorni di permesso?",
+        "Quali sono le festività aziendali?"
+      ]
+    },
+    {
+      "category": "Sedi e Facilities",
+      "prompts": [
+        "Dove sono le sedi Reply?",
+        "Come funziona l'accesso alle sedi?",
+        "Posso prenotare una sala riunioni?",
+        "C'è parcheggio in sede?",
+        "Quali sono gli orari degli uffici?",
+        "Come funziona il desk booking?",
+        "Ci sono spazi per il pranzo?"
+      ]
+    },
+    {
+      "category": "Formazione e Crescita",
+      "prompts": [
+        "Quali corsi di formazione sono disponibili?",
+        "Come accedere alle certificazioni?",
+        "C'è un budget formazione?",
+        "Quali sono le prossime sessioni di training?",
+        "Come funziona la Reply Academy?",
+        "Posso partecipare a conferenze?",
+        "Ci sono programmi di mentoring?"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Come accedere all'organigramma aziendale?",
+      "answer": "L'organigramma è disponibile sulla intranet aziendale. Puoi chiedere ad Alfred per avere informazioni specifiche sulla struttura della tua BU."
+    },
+    {
+      "question": "Come contattare l'HR?",
+      "answer": "Il team HR è raggiungibile via email all'indirizzo hr@reply.com o tramite il portale interno. Per questioni urgenti puoi anche chiedere ad Alfred."
+    },
+    {
+      "question": "Dove trovo informazioni sui benefit?",
+      "answer": "Tutte le informazioni sui benefit aziendali sono disponibili sul portale HR e nel manuale del dipendente che hai ricevuto all'onboarding."
+    },
+    {
+      "question": "Come funziona il career path?",
+      "answer": "Reply ha un sistema di career path strutturato con livelli di seniority chiari. Parla con il tuo manager durante i one-to-one per definire il tuo percorso di crescita."
+    },
+    {
+      "question": "Posso cambiare Business Unit?",
+      "answer": "Sì, la mobilità interna è incoraggiata. Parla con il tuo manager e l'HR per valutare opportunità in altre BU."
+    }
+  ],
+  "business_units": [
+    {
+      "nome": "Cluster Reply",
+      "focus": "Digital Solutions & Innovation",
+      "competenze": ["Cloud", "DevOps", "AI/ML", "Data Engineering"],
+      "description": "Business Unit focalizzata su soluzioni innovative e trasformazione digitale"
+    },
+    {
+      "nome": "Cluster Mesh",
+      "focus": "Collaborative Innovation",
+      "competenze": ["Agile", "Team Building", "Innovation Lab"],
+      "description": "Team dedicato all'innovazione collaborativa e alla cultura aziendale"
+    },
+    {
+      "nome": "Reply Group",
+      "focus": "Technology Consulting",
+      "competenze": ["Strategy", "Technology", "Digital"],
+      "description": "Gruppo internazionale di consulenza tecnologica con oltre 10.000 dipendenti"
+    }
+  ]
+}

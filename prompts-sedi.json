@@ -1,0 +1,127 @@
+{
+  "description": "Prompt per la funzionalità Gestione Sedi e Presenza in Ufficio",
+  "categories": [
+    {
+      "category": "Presenza in Sede",
+      "prompts": [
+        "Chi è in ufficio oggi?",
+        "Chi è presente a Milano oggi?",
+        "Quali colleghi sono a Torino questa settimana?",
+        "Mostrami chi sarà in sede domani",
+        "C'è qualcuno in N250 oggi?",
+        "Chi è presente nelle sedi questa settimana?",
+        "Fammi vedere la presenza in ufficio per venerdì"
+      ]
+    },
+    {
+      "category": "Pianificazione Presenza",
+      "prompts": [
+        "Voglio andare in ufficio giovedì",
+        "Prenoto la mia presenza a Milano per domani",
+        "Segna la mia presenza in sede per la prossima settimana",
+        "Annulla la mia prenotazione per domani",
+        "Modifica la mia presenza di venerdì"
+      ]
+    },
+    {
+      "category": "Car Sharing",
+      "prompts": [
+        "Qualcuno va a Milano da Torino domani?",
+        "Cerco un passaggio per Torino martedì",
+        "Offro un passaggio da Milano a Torino venerdì",
+        "C'è qualcuno che condivide il viaggio domani?",
+        "Organizziamo un car sharing per la sede di Genova?",
+        "Chi parte da Milano per Torino domani mattina?"
+      ]
+    },
+    {
+      "category": "Informazioni Sedi",
+      "prompts": [
+        "Dove posso parcheggiare a N250?",
+        "Come accedere alla sede di Milano?",
+        "Quali sono gli orari di apertura della sede?",
+        "Posso usare il mio badge in tutte le sedi?",
+        "Come prenotare una postazione?",
+        "C'è una sala riunioni disponibile domani?",
+        "Qual è l'indirizzo della sede di Torino?",
+        "Come funziona il parcheggio in N250?"
+      ]
+    },
+    {
+      "category": "Coordinamento Viaggi",
+      "prompts": [
+        "Devo andare alla sede di Milano, come organizzo il viaggio?",
+        "Quali sono le opzioni di trasporto per Torino?",
+        "C'è un treno comodo per Milano domani?",
+        "Organizza un viaggio intersede per la prossima settimana",
+        "Quanto tempo ci vuole da Torino a Milano?",
+        "Quali sono i treni migliori per andare in sede?"
+      ]
+    },
+    {
+      "category": "Ricerca Colleghi",
+      "prompts": [
+        "Dove lavora Marco Rossi?",
+        "In quale sede si trova il team di sviluppo?",
+        "Chi lavora abitualmente a Milano?",
+        "Mostrami i colleghi della sede di Genova",
+        "Quando sarà in ufficio il mio manager?",
+        "Con chi potrei coordinarmi per andare in sede?"
+      ]
+    },
+    {
+      "category": "Eventi e Meeting",
+      "prompts": [
+        "Ci sono eventi in sede questa settimana?",
+        "Quando è il prossimo team building?",
+        "C'è un meeting importante per cui devo essere in sede?",
+        "Organizziamo un incontro in presenza?",
+        "Quali sono gli eventi in programma a Milano?"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Posso parcheggiare a N250?",
+      "answer": "Sì, la sede N250 dispone di parcheggio. È necessario registrare la propria targa in portineria."
+    },
+    {
+      "question": "Il mio badge funziona in tutte le sedi?",
+      "answer": "Sì, il badge Reply funziona in tutte le sedi del gruppo. Per le sedi non Reply potrebbe essere necessario registrarsi in reception."
+    },
+    {
+      "question": "Come prenoto una postazione?",
+      "answer": "Le postazioni possono essere prenotate tramite il sistema di desk booking aziendale o comunicando la presenza ad Alfred."
+    },
+    {
+      "question": "Quali sono gli orari di apertura delle sedi?",
+      "answer": "Le sedi sono generalmente aperte dalle 8:00 alle 19:00 nei giorni lavorativi. Verifica con la reception per eventuali variazioni."
+    }
+  ],
+  "sedi": [
+    {
+      "nome": "Milano - N250",
+      "codice": "MI-N250",
+      "indirizzo": "Via Castellanza 250, Milano",
+      "parcheggio": true,
+      "badge_access": true,
+      "desk_booking": true
+    },
+    {
+      "nome": "Torino",
+      "codice": "TO",
+      "indirizzo": "Corso Francia, Torino",
+      "parcheggio": true,
+      "badge_access": true,
+      "desk_booking": true
+    },
+    {
+      "nome": "Genova",
+      "codice": "GE",
+      "indirizzo": "Via Genova, Genova",
+      "parcheggio": false,
+      "badge_access": true,
+      "desk_booking": true
+    }
+  ]
+}
